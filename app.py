@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Form
+from fastapi import Response
 from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
 from typing import Dict, Any
@@ -66,7 +67,7 @@ async def mm_outgoing(
     msg = f"**@{user_name}**\n{answer}"
     await post_to_mattermost(msg)
 
-    return JSONResponse({"text": "✅ 답변 생성 중..."}, status_code=200)
+    return Response(status_code=200, media_type="text/plain", content="")
 
 
 @app.get("/end")
