@@ -8,7 +8,7 @@ import os
 import asyncio
 
 load_dotenv()
-
+#계정 소유자 변경 확인
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 FINE_TUNED_MODEL = os.getenv("FINE_TUNED_MODEL")
 MM_INCOMING_WEBHOOK_URL = os.getenv("MM_INCOMING_WEBHOOK_URL")
